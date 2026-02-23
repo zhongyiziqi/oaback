@@ -1,0 +1,55 @@
+2026-02-11 17:28:11,538 - celery.worker.consumer.connection - INFO - Connected to redis://127.0.0.1:6379/1
+2026-02-11 17:28:11,541 - celery.worker.consumer.mingle - INFO - mingle: searching for neighbors
+2026-02-11 17:28:12,569 - celery.worker.consumer.mingle - INFO - mingle: all alone
+2026-02-11 17:28:12,586 - celery.worker.pidbox - INFO - pidbox: Connected to redis://127.0.0.1:6379/1.
+2026-02-11 17:28:12,600 - celery.apps.worker - INFO - celery@Jiang ready.
+2026-02-11 17:30:15,539 - celery.worker.strategy - INFO - Task oaback.celery.debug_task[7d49fab2-ca97-4141-903e-4f8a5e8a3d2b] received
+2026-02-11 17:30:15,541 - celery.redirected - WARNING - Request: <Context: {'lang': 'py', 'task': 'oaback.celery.debug_task', 'id': '7d49fab2-ca97-4141-903e-4f8a5e8a3d2b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '7d49fab2-ca97-4141-903e-4f8a5e8a3d2b', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen23908@Jiang', 'ignore_result': True, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'properties': {'correlation_id': '7d49fab2-ca97-4141-903e-4f8a5e8a3d2b', 'reply_to': '43cee1e1-eee5-3642-a06a-2725f53277c2', 'delivery_mode': 2, 'delivery_info': {'exchange': '', 'routing_key': 'celery'}, 'priority': 0, 'body_encoding': 'base64', 'delivery_tag': 'a9780fd7-df9e-4304-a7bd-98dfecd2682b'}, 'reply_to': '43cee1e1-eee5-3642-a06a-2725f53277c2', 'correlation_id': '7d49fab2-ca97-4141-903e-4f8a5e8a3d2b', 'hostname': 'celery@Jiang', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': False}, 'args': [], 'kwargs': {}, 'is_eager': False, 'callbacks': None, 'errbacks': None, 'chain': None, 'chord': None, 'called_directly': False, 'headers': None, '_protected': 1}>
+2026-02-11 17:30:15,578 - celery.app.trace - INFO - Task oaback.celery.debug_task[7d49fab2-ca97-4141-903e-4f8a5e8a3d2b] succeeded in 0.046999999991385266s: None
+2026-02-11 17:41:56,677 - celery.worker.consumer.consumer - ERROR - Received unregistered task of type 'send_email_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[["2267894728@qq.com", "\\u3010\\u65e0\\u654cOA\\u3011\\u8d26\\u53f7\\u6fc0\\u6d3b", "\\u8bf7\\u70b9\\u51fb\\u4ee5\\u4e0b\\u94fe\\u63a5\\u6fc0\\u6d3b\\u8d26\\u53f7\\uff1ahttp://127.0.0.1:8000/staff/active?token=8K0MG6vMjdphLbeZU1adJG2uJyuTEfv8iCk2mY8dHZ2Zq7wPiSfTmQ9vvICchJgO"], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (331b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'send_email_task', 'id': '92a296ad-1ebe-4305-bd56-35f41a1ec489', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '92a296ad-1ebe-4305-bd56-35f41a1ec489', 'parent_id': None, 'argsrepr': "('2267894728@qq.com', '【无敌OA】账号激活', '请点击以下链接激活账号：http://127.0.0.1:8000/staff/active?token=8K0MG6vMjdphLbeZU1adJG2uJyuTEfv8iCk2mY8dHZ2Zq7wPiSfTmQ9vvICchJgO')", 'kwargsrepr': '{}', 'origin': 'gen9260@Jiang', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\anaconda\envs\djangoo\Lib\site-packages\celery\worker\consumer\consumer.py", line 668, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'send_email_task'
+2026-02-11 17:43:48,158 - celery.worker.consumer.connection - INFO - Connected to redis://127.0.0.1:6379/1
+2026-02-11 17:43:48,203 - celery.worker.consumer.mingle - INFO - mingle: searching for neighbors
+2026-02-11 17:43:49,239 - celery.worker.consumer.mingle - INFO - mingle: all alone
+2026-02-11 17:43:49,252 - celery.worker.pidbox - INFO - pidbox: Connected to redis://127.0.0.1:6379/1.
+2026-02-11 17:43:49,257 - celery.apps.worker - INFO - celery@Jiang ready.
+2026-02-11 17:44:18,363 - celery.worker.strategy - INFO - Task send_email_task[1c5de8fa-4d33-4391-9e92-0bd547fe8171] received
+2026-02-11 17:44:19,472 - celery.app.trace - INFO - Task send_email_task[1c5de8fa-4d33-4391-9e92-0bd547fe8171] succeeded in 1.1089999999967404s: None
+2026-02-11 19:23:07,657 - celery.worker.strategy - INFO - Task send_email_task[b4cd165a-5f2f-4dfe-9f02-39ecd458bea6] received
+2026-02-11 19:23:08,673 - celery.app.trace - INFO - Task send_email_task[b4cd165a-5f2f-4dfe-9f02-39ecd458bea6] succeeded in 1.0s: None
+2026-02-11 21:43:09,530 - celery.worker.strategy - INFO - Task send_email_task[cc1bcabd-de36-437a-aa0e-9bfd8a2bd701] received
+2026-02-11 21:43:10,530 - celery.app.trace - INFO - Task send_email_task[cc1bcabd-de36-437a-aa0e-9bfd8a2bd701] succeeded in 1.0s: None
+2026-02-12 08:07:33,639 - py.warnings - WARNING - D:\anaconda\envs\djangoo\Lib\site-packages\celery\concurrency\gevent.py:57: UserWarning: libuv only supports millisecond timer resolution; all times less will be set to 1 ms
+  g = self._Greenlet.spawn_later(secs, entry)
+
+2026-02-13 15:27:17,764 - celery.worker.consumer.connection - INFO - Connected to redis://127.0.0.1:6379/1
+2026-02-13 15:27:17,806 - celery.worker.consumer.mingle - INFO - mingle: searching for neighbors
+2026-02-13 15:27:19,135 - celery.worker.consumer.mingle - INFO - mingle: all alone
+2026-02-13 15:27:19,154 - celery.apps.worker - INFO - celery@Jiang ready.
+2026-02-13 15:27:19,171 - celery.worker.pidbox - INFO - pidbox: Connected to redis://127.0.0.1:6379/1.
+2026-02-13 15:31:14,976 - celery.worker.strategy - INFO - Task send_email_task[82942d37-ea40-4d0e-889a-50cddf9d22c2] received
+2026-02-13 15:31:16,168 - celery.app.trace - INFO - Task send_email_task[82942d37-ea40-4d0e-889a-50cddf9d22c2] succeeded in 1.1719999999913853s: None
+2026-02-13 20:32:07,231 - py.warnings - WARNING - D:\anaconda\envs\djangoo\Lib\site-packages\celery\concurrency\gevent.py:57: UserWarning: libuv only supports millisecond timer resolution; all times less will be set to 1 ms
+  g = self._Greenlet.spawn_later(secs, entry)
+
